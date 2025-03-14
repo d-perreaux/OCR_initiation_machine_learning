@@ -3,6 +3,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_absolute_percentage_error
 from sklearn.preprocessing import StandardScaler
 
 df = pd.read_csv('data/age_vs_poids_vs_taille_vs_sexe.csv')
@@ -67,6 +68,21 @@ reg3.fit(X3, y3)
 print(f"R^2 : {np.round(reg3.score(X3, y3), 3)}")
 
 print(f"poids = {np.round(reg3.coef_[0], 2)} * taille + bruit")
+
+y_pred = reg.predict(X)
+y2_pred = reg2.predict(X2)
+
+print(mean_squared_error(y, y_pred))
+print(mean_absolute_error(y, y_pred))
+print(mean_absolute_percentage_error(y, y_pred))
+
+print(mean_squared_error(y2, y2_pred))
+print(mean_absolute_error(y2, y2_pred))
+print(mean_absolute_percentage_error(y2, y2_pred))
+
+
+
+
 # data = X2
 #
 # scaler = StandardScaler()
