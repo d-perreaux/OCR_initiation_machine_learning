@@ -42,7 +42,6 @@ reg2 = LinearRegression()
 reg2.fit(X2, y2)
 
 
-
 # le score
 # https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression.score
 # The best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse).
@@ -79,9 +78,6 @@ print(mean_absolute_percentage_error(y, y_pred))
 print(mean_squared_error(y2, y2_pred))
 print(mean_absolute_error(y2, y2_pred))
 print(mean_absolute_percentage_error(y2, y2_pred))
-
-
-
 
 # data = X2
 #
