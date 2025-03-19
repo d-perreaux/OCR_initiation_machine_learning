@@ -6,6 +6,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_absolute_percentage_error
 from sklearn.preprocessing import StandardScaler
 
+
 df = pd.read_csv('data/age_vs_poids_vs_taille_vs_sexe.csv')
 
 print(df.head())
@@ -92,4 +93,3 @@ print(mean_absolute_percentage_error(y2, y2_pred))
 # print(f"R^2 : {np.round(reg3.score(data, y2), 3)}")
 #
 # print(f"poids = {np.round(reg3.coef_[0],  2)} * sexe + {np.round(reg3.coef_[1],  2)} * age +  {np.round(reg3.coef_[2], 2)} * taille + du bruit")
-
