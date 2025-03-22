@@ -39,6 +39,12 @@ y_pred_03 = [0 if value < 0.3 else 1 for value in y_hat_proba]
 y_pred_07 = [0 if value < 0.7 else 1 for value in y_hat_proba]
 
 print(confusion_matrix(y_test, y_pred_03))
+# Matrice de confusion binaire
+# [[TN, FP]
+#  [FN, TP]]
+# [[negatifs réels],
+#  [positifs réels]
+
 # [[38  5]
 #  [ 1 70]]
 print(confusion_matrix(y_test, y_pred_07))
